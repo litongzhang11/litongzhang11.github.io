@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Litong Zhang | University of Southern California</title>
+<meta name="description" content="Litong Zhang - Ph.D. candidate in Finance and Business Economics at the USC Marshall School of Business. Research on social finance, behavioral finance, and the disposition effect." />
+<meta name="keywords" content="Litong Zhang, USC, Marshall School of Business, Finance, Ph.D. candidate, Social Finance, Behavioral Finance, Disposition Effect, Asset Pricing, StockTwits, Large Language Models" />
+<link rel="canonical" href="https://litongzhang.github.io" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Litong Zhang | University of Southern California" />
+<meta property="og:description" content="Ph.D. candidate in Finance and Business Economics at USC Marshall. On the 2026-2027 job market." />
+<meta property="og:url" content="https://litongzhang.github.io" />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/400.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/400-italic.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/600.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/700.css" />
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root {
+    --paper:      #fbfaf6;
+    --paper-warm: #f4f1e8;
+    --ink:        #1c1b18;
+    --ink-soft:   #5d584d;
+    --ink-faint:  #8b8576;
+    --accent:     #2c5545;
+    --accent-deep:#1d3a2e;
+    --rule:       #e4e0d4;
+    --nav-bg:     rgba(251, 250, 246, 0.88);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Libertinus Serif", "Linux Libertine", "Linux Libertine O", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); }
+
+  /* ---------- shared layout ---------- */
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
+  .measure { max-width: 680px; }
+
+  section { padding: 5.5rem 0; }
+  section + section { border-top: 1px solid var(--rule); }
+
+  /* ---------- eyebrow / section heading ---------- */
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .eyebrow .num { color: var(--ink-faint); }
+
+  h2.section-title {
+    font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 2.6rem;
+  }
+
+  /* ---------- navigation ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--rule); }
+  .nav-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .nav-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+  .cv-btn {
+    font-family: inherit;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .cv-btn:hover { background: var(--accent); color: var(--paper); }
+
+  /* ---------- hero ---------- */
+  .hero { padding-top: 5rem; padding-bottom: 5.5rem; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3.5rem;
+    align-items: start;
+  }
+  .hero h1 {
+    font-size: clamp(2.7rem, 6.5vw, 4.4rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.7rem;
+  }
+  .hero h1 .cn {
+    font-size: 0.42em;
+    font-weight: 400;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    margin-left: 0.7rem;
+    white-space: nowrap;
+  }
+  .hero .affil {
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 1.6rem;
+  }
+  .contact {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 1.8rem;
+  }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .contact .dot { color: var(--ink-faint); margin: 0 0.5rem; }
+  .intro { font-size: 1.12rem; }
+  .intro .jobmkt {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  /* photo + placeholder */
+  .portrait {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    border: 1px solid var(--rule);
+    padding: 8px;
+    background: var(--paper);
+  }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .portrait-ph {
+    width: 100%; height: 100%;
+    background: var(--paper-warm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    color: var(--ink-faint);
+  }
+  .portrait-ph svg { width: 64px; height: 64px; opacity: 0.55; }
+  .portrait-ph span {
+    font-size: 0.82rem;
+    font-style: italic;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* ---------- research ---------- */
+  .group-label {
+    font-size: 0.82rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 2.8rem 0 1.4rem;
+  }
+  .group-label:first-of-type { margin-top: 0; }
+
+  .paper { margin-bottom: 2.4rem; }
+  .paper:last-child { margin-bottom: 0; }
+  .paper h3 {
+    font-size: 1.32rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+  }
+  .paper .meta {
+    font-size: 0.98rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 0.7rem;
+  }
+
+  /* collapsible abstract */
+  .abs { margin-top: 0.55rem; }
+  .abs > summary {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 0.2s ease;
+  }
+  .abs > summary::-webkit-details-marker { display: none; }
+  .abs > summary:hover { border-bottom-color: var(--accent); }
+  .abs > summary::after { content: " +"; font-family: inherit; }
+  .abs[open] > summary::after { content: " \2212"; }
+  .abs .abstract-body {
+    margin-top: 0.85rem;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--rule);
+    font-size: 0.99rem;
+    color: var(--ink-soft);
+  }
+  .abs .abstract-body p + p { margin-top: 0.7rem; }
+
+  .avail {
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--ink-faint);
+    margin-top: 0.6rem;
+  }
+
+  /* ---------- teaching ---------- */
+  .institution {
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin: 2.6rem 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .institution:first-of-type { margin-top: 0; }
+  .course { margin-bottom: 1.4rem; }
+  .course .title { font-weight: 600; font-size: 1.08rem; }
+  .course .detail { font-size: 0.98rem; color: var(--ink-soft); font-style: italic; }
+
+  /* ---------- simple lists ---------- */
+  .plain-list { list-style: none; }
+  .plain-list li {
+    margin-bottom: 0.7rem;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+  .plain-list li::before {
+    content: "\2014";
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+  }
+  .plain-list .detail { color: var(--ink-soft); font-style: italic; }
+
+  /* ---------- footer ---------- */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2.5rem 0;
+    font-size: 0.92rem;
+    color: var(--ink-faint);
+  }
+  .footer-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* ---------- focus + motion ---------- */
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  .js .reveal { opacity: 0; transform: translateY(14px); }
+  .js .reveal.in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .js .hero-anim { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+  .js .hero-anim:nth-child(1) { animation-delay: 0.05s; }
+  .js .hero-anim:nth-child(2) { animation-delay: 0.13s; }
+  .js .hero-anim:nth-child(3) { animation-delay: 0.21s; }
+  .js .hero-anim:nth-child(4) { animation-delay: 0.29s; }
+  .hero-grid > .portrait.hero-anim { animation-delay: 0.18s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal, .js .hero-anim, .hero-grid > .portrait.hero-anim {
+      opacity: 1 !important; transform: none !important; animation: none !important;
+    }
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .wrap, .nav-inner, .footer-inner { padding-left: 1.4rem; padding-right: 1.4rem; }
+    .nav-inner { gap: 0.9rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.95rem; }
+    .cv-btn { font-size: 0.8rem; padding: 0.45rem 0.7rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+    .portrait { max-width: 240px; order: -1; }
+    .hero h1 .cn { display: block; margin-left: 0; margin-top: 0.4rem; }
+    section { padding: 4rem 0; }
+  }
+  @media (max-width: 460px) {
+    .nav-name { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= NAVIGATION ======================= -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Litong Zhang</a>
+    <ul class="nav-links">
+      <li><a href="#education">Education</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#service">Service</a></li>
+    </ul>
+    <a class="cv-btn" href="/assets/files/cv.pdf">Download CV</a>
+  </div>
+</nav>
+
+<!-- ======================= HERO / INTRO ======================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-anim">Litong Zhang<span class="cn">&#24352;&#21382;&#28286;</span></h1>
+        <p class="affil hero-anim">
+          Marshall School of Business, <a href="https://www.marshall.usc.edu/" rel="noopener" style="color:inherit;">University of Southern California</a>
+        </p>
+
+        <p class="contact hero-anim">
+          Phone&nbsp;(+1) 919-599-1901<br />
+          Email&nbsp;<a href="mailto:litong.zhang@marshall.usc.edu">litong.zhang@marshall.usc.edu</a><br />
+          701 Exposition Blvd., Ste. 231, Los Angeles, CA 90089
+        </p>
+
+        <p class="intro hero-anim">
+          Welcome! I am a sixth-year Ph.D. candidate in Finance and Business Economics at the University of Southern California. I study social finance and behavioral finance, with a focus on how investor communication, memory, and cognitive reference points shape trading behavior and asset prices. My work combines large-scale text data and LLM-supervised measurement with empirical asset pricing.
+          <span class="jobmkt">I am on the 2026&ndash;2027 job market.</span>
+        </p>
+      </div>
+
+      <div class="portrait hero-anim">
+        <div class="portrait-ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>Portrait forthcoming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= EDUCATION ======================= -->
+<section id="education">
+  <div class="wrap measure">
+    <p class="eyebrow reveal"><span class="num">01</span> &nbsp;/&nbsp; Education</p>
+    <h2 class="section-title reveal">Education</h2>
+
+    <p class="institution reveal">University of Southern California</p>
+    <div class="course reveal">
+      <p class="title">Ph.D. in Finance and Business Economics</p>
+      <p class="detail">2021 &ndash; 2027 (expected) &mdash; Marshall School of Business</p>
+    </div>
+
+    <p class="institution reveal">Duke University</p>
+    <div class="course reveal">
+      <p class="title">M.A. in Economics</p>
+      <p class="detail">2019 &ndash; 2021 &mdash; <em>Duke Economics Master&rsquo;s Scholar Award</em></p>
+    </div>
+
+    <p class="institution reveal">University of Utah</p>
+    <div class="course reveal">
+      <p class="title">B.S. in Finance and Mathematics</p>
+      <p class="detail">2014 &ndash; 2018 &mdash; <em>Magna Cum Laude</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RESEARCH ======================= -->
+<section id="research">
+  <div class="wrap measure">
+    <p class="eyebrow reveal"><span class="num">02</span> &nbsp;/&nbsp; Research</p>
+    <h2 class="section-title reveal">Research</h2>
+
+    <p class="group-label reveal">Job Market Paper</p>
+    <article class="paper reveal">
+      <h3>Reference-Dependent Sentiment</h3>
+      <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div class="abstract-body">
+          <p>I examine whether social media discourse amplifies the disposition effect in equity markets. Using approximately 200 million StockTwits posts from 2008 to 2024, I construct a daily measure of the share of reference-dependent language that is gain-framed or loss-framed, based on an LLM-supervised classification. I find that gain-dominant discourse increases aggregate turnover in up-markets, whereas loss-dominant discourse reduces turnover in down-markets. Around earnings announcements, sorting on the earnings surprise and pre-event GainTalk yields significant Fama-French five-factor alphas for a high-GainTalk disposition spread, whereas the reverse low-GainTalk spread earns alphas indistinguishable from zero. Overall, the evidence indicates that reference-dependent sentiment acts as a state-dependent amplifier of the disposition effect in trading and in prices around earnings news.</p>
+        </div>
+      </details>
+      <p class="avail">Draft available upon request.</p>
+    </article>
+
+    <p class="group-label reveal">Working Papers</p>
+    <article class="paper reveal">
+      <h3>Memorable Expectations and Asymmetric Market Reactions to Earnings Surprises</h3>
+      <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div class="abstract-body">
+          <p>This paper studies how the memorability of analyst expectations affects market reactions to earnings news. Using a large sample of analyst consensus forecasts and earnings announcements, I show that round-number forecasts create salient benchmarks that systematically alter how investors process earnings surprises. Firms with round-number consensus forecasts face a higher implicit performance hurdle, so announcement returns are lower when earnings merely meet expectations. At the same time, market reactions become more sensitive to the size of positive earnings surprises when expectations are anchored at round numbers, producing a steeper return&ndash;surprise relation on the positive side. The attention attracted by memorable round forecasts also spills over to other firms announcing earnings on the same day: non-round firms experience weaker announcement reactions but subsequently exhibit stronger post-earnings drift, consistent with delayed price adjustment.</p>
+          <p>Together, these results suggest that salient expectations reshape how earnings information is incorporated into prices, generating asymmetric price reactions at the event while producing delayed price incorporation in the cross-section of non-round firms.</p>
+        </div>
+      </details>
+      <p class="avail">Draft available upon request.</p>
+    </article>
+
+    <article class="paper reveal">
+      <h3>Memorability and the Disposition Effect</h3>
+      <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div class="abstract-body">
+          <p>This paper investigates the effect of memory-induced attention on investor behavior, focusing on the disposition effect: the tendency to sell winning investments while holding onto losing ones. Drawing on associative memory theories (Bordalo, Gennaioli, and Shleifer, 2020), I show that round numbers in stock prices serve as memorable cognitive reference points that amplify the disposition effect. The finding is robust across specifications, highlighting the psychological impact of price roundness on trading behavior and the critical role of reference-point memorability in shaping investor decisions.</p>
+        </div>
+      </details>
+      <p class="avail">Draft available upon request.</p>
+    </article>
+
+    <article class="paper reveal">
+      <h3>Social Gathering and Amplified Familiarity Bias</h3>
+      <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
+      <details class="abs">
+        <summary>Abstract</summary>
+        <div class="abstract-body">
+          <p>This paper investigates the causal role of contemporaneous social interaction in mutual fund managers&rsquo; portfolio choices. Using manually collected information on the Top 30 MBA networks of alumni reunion cohorts, I show that mutual fund managers connected to senior officers (CEO, CFO, and Chairman) at firms increase connected holdings following the MBA alumni reunions. Stock-level performance tests show that fund managers do not achieve significant positive returns on these connected positions after reunion events, favoring the familiarity hypothesis: an increase in contacts leads to a notable surge in buying behavior despite the absence of superior returns. These findings highlight the role of social networks as channels for the formation of behavioral bias.</p>
+        </div>
+      </details>
+      <p class="avail">Draft available upon request.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= TEACHING ======================= -->
+<section id="teaching">
+  <div class="wrap measure">
+    <p class="eyebrow reveal"><span class="num">03</span> &nbsp;/&nbsp; Teaching</p>
+    <h2 class="section-title reveal">Teaching</h2>
+
+    <p class="institution reveal">University of Southern California</p>
+    <div class="course reveal">
+      <p class="title">ECON 351: Microeconomics for Business</p>
+      <p class="detail">Sole Instructor, Undergraduate Core | Fall 2024 &mdash; Evaluation 3.68/4.00 (60 students)</p>
+    </div>
+    <div class="course reveal">
+      <p class="title">GSBA 602: Selected Issues in Economic Theory I</p>
+      <p class="detail">Teaching Assistant for Prof. Anthony Marino, Ph.D. Core | Fall 2023</p>
+    </div>
+    <div class="course reveal">
+      <p class="title">GSBA 612: Selected Issues in Economic Theory II</p>
+      <p class="detail">Teaching Assistant for Prof. Odilon C&acirc;mara, Ph.D. Core | Spring 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SERVICE & EXPERIENCE ======================= -->
+<section id="service">
+  <div class="wrap measure">
+    <p class="eyebrow reveal"><span class="num">04</span> &nbsp;/&nbsp; Service &amp; Experience</p>
+    <h2 class="section-title reveal">Service &amp; Experience</h2>
+
+    <p class="institution reveal">Presentations</p>
+    <ul class="plain-list reveal">
+      <li>USC Marshall Finance Seminar &mdash; <span class="detail">2024, 2025</span></li>
+      <li>USC Finance Ph.D. Miniconference &mdash; <span class="detail">2023</span></li>
+    </ul>
+
+    <p class="institution reveal">Service</p>
+    <ul class="plain-list reveal">
+      <li>Organizer, USC Finance Ph.D. Conference &mdash; <span class="detail">2024, 2025</span></li>
+    </ul>
+
+    <p class="institution reveal">Research Assistantships</p>
+    <ul class="plain-list reveal">
+      <li>Prof. David Hirshleifer, USC Marshall &mdash; <span class="detail">2022 &ndash; Present</span></li>
+      <li>Prof. Alon Brav and Prof. Sharon Belenzon, Duke Fuqua &mdash; <span class="detail">2019 &ndash; 2021</span></li>
+      <li>Prof. Matthew Ringgenberg, University of Utah &mdash; <span class="detail">2019 &ndash; 2021</span></li>
+      <li>Prof. Elena Simintzi, UNC Kenan-Flagler &mdash; <span class="detail">2019 &ndash; 2021</span></li>
+    </ul>
+
+    <p class="institution reveal">Skills</p>
+    <ul class="plain-list reveal">
+      <li>Programming &mdash; <span class="detail">Python, R, Stata, SAS, SQL</span></li>
+      <li>Machine learning &mdash; <span class="detail">PyTorch, HuggingFace Transformers, DeBERTa, OpenAI API, scikit-learn, LLM fine-tuning</span></li>
+      <li>Data &mdash; <span class="detail">CRSP, Compustat, WRDS, I/B/E/S, StockTwits</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Litong Zhang</span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script>
+  // Nav: hairline border once the page is scrolled
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Reveal-on-scroll + active nav link (graceful fallback if unsupported)
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      revealObs.observe(el);
+    });
+
+    var links = {};
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      links[a.getAttribute('href').slice(1)] = a;
+    });
+    var navObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.values(links).forEach(function (l) { l.classList.remove('active'); });
+          if (links[e.target.id]) links[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) {
+      navObs.observe(s);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('in');
+    });
+  }
+</script>
+
+</body>
+</html>

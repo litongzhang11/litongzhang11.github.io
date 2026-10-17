@@ -196,7 +196,7 @@
     padding: 8px;
     background: var(--paper);
   }
-  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
   .portrait-ph {
     width: 100%; height: 100%;
     background: var(--paper-warm);
@@ -289,21 +289,6 @@
   .course .title { font-weight: 600; font-size: 1.08rem; }
   .course .detail { font-size: 0.98rem; color: var(--ink-soft); font-style: italic; }
 
-  /* ---------- simple lists ---------- */
-  .plain-list { list-style: none; }
-  .plain-list li {
-    margin-bottom: 0.7rem;
-    padding-left: 1.1rem;
-    position: relative;
-  }
-  .plain-list li::before {
-    content: "\2014";
-    position: absolute;
-    left: 0;
-    color: var(--ink-faint);
-  }
-  .plain-list .detail { color: var(--ink-soft); font-style: italic; }
-
   /* ---------- footer ---------- */
   footer {
     border-top: 1px solid var(--rule);
@@ -382,7 +367,6 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#teaching">Teaching</a></li>
-      <li><a href="#service">Service</a></li>
     </ul>
     <a class="cv-btn" href="/assets/files/cv.pdf">Download CV</a>
   </div>
@@ -393,7 +377,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <h1 class="hero-anim">Litong Zhang<span class="cn">&#24352;&#21382;&#28286;</span></h1>
+        <h1 class="hero-anim">Litong Zhang<span class="cn">张历潼</span></h1>
         <p class="affil hero-anim">
           Marshall School of Business, <a href="https://www.marshall.usc.edu/" rel="noopener" style="color:inherit;">University of Southern California</a>
         </p>
@@ -411,13 +395,7 @@
       </div>
 
       <div class="portrait hero-anim">
-        <div class="portrait-ph">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-          </svg>
-          <span>Portrait forthcoming</span>
-        </div>
+        <img src="assets/img/portrait.jpg" alt="Portrait of Litong Zhang" width="682" height="1024" />
       </div>
     </div>
   </div>
@@ -438,13 +416,13 @@
     <p class="institution reveal">Duke University</p>
     <div class="course reveal">
       <p class="title">M.A. in Economics</p>
-      <p class="detail">2019 &ndash; 2021 &mdash; <em>Duke Economics Master&rsquo;s Scholar Award</em></p>
+      <p class="detail">2019 &ndash; 2021</p>
     </div>
 
     <p class="institution reveal">University of Utah</p>
     <div class="course reveal">
       <p class="title">B.S. in Finance and Mathematics</p>
-      <p class="detail">2014 &ndash; 2018 &mdash; <em>Magna Cum Laude</em></p>
+      <p class="detail">2014 &ndash; 2018</p>
     </div>
   </div>
 </section>
@@ -462,36 +440,35 @@
       <details class="abs">
         <summary>Abstract</summary>
         <div class="abstract-body">
-          <p>I examine whether social media discourse amplifies the disposition effect in equity markets. Using approximately 200 million StockTwits posts from 2008 to 2024, I construct a daily measure of the share of reference-dependent language that is gain-framed or loss-framed, based on an LLM-supervised classification. I find that gain-dominant discourse increases aggregate turnover in up-markets, whereas loss-dominant discourse reduces turnover in down-markets. Around earnings announcements, sorting on the earnings surprise and pre-event GainTalk yields significant Fama-French five-factor alphas for a high-GainTalk disposition spread, whereas the reverse low-GainTalk spread earns alphas indistinguishable from zero. Overall, the evidence indicates that reference-dependent sentiment acts as a state-dependent amplifier of the disposition effect in trading and in prices around earnings news.</p>
+          <p>Under what circumstances is a paper gain more likely to generate disposition-effect selling? I examine whether reference-dependent thinking among investors is associated with the strength of disposition-effect trading. Using 185.1 million StockTwits posts from 2013 to 2024 and an LLM-supervised classification, I construct a daily measure of reference-dependent sentiment, capturing how actively investors discuss gains and losses in the market. When people talk more about gains, turnover is higher on up-market days; when they talk more about losses, turnover is lower on down-market days. In the cross-section, this sentiment predicts how capital gain overhang translates into retail sell flow. Around earnings announcements, buying good-news stocks after people have been talking about gains and selling bad-news stocks after people have been talking about losses earns a Fama-French five-factor alpha of 1.015% per month, or 12.2% annualized; the reverse strategy earns alphas indistinguishable from zero. Overall, reference-dependent sentiment identifies when the disposition effect shows up more strongly in trading and in prices around earnings news.</p>
         </div>
       </details>
-      <p class="avail">Draft available upon request.</p>
+      <p class="avail">Draft coming soon.</p>
     </article>
 
     <p class="group-label reveal">Working Papers</p>
     <article class="paper reveal">
-      <h3>Memorable Expectations and Asymmetric Market Reactions to Earnings Surprises</h3>
+      <h3>Reference-Point Fluency and Memorability</h3>
       <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
       <details class="abs">
         <summary>Abstract</summary>
         <div class="abstract-body">
-          <p>This paper studies how the memorability of analyst expectations affects market reactions to earnings news. Using a large sample of analyst consensus forecasts and earnings announcements, I show that round-number forecasts create salient benchmarks that systematically alter how investors process earnings surprises. Firms with round-number consensus forecasts face a higher implicit performance hurdle, so announcement returns are lower when earnings merely meet expectations. At the same time, market reactions become more sensitive to the size of positive earnings surprises when expectations are anchored at round numbers, producing a steeper return&ndash;surprise relation on the positive side. The attention attracted by memorable round forecasts also spills over to other firms announcing earnings on the same day: non-round firms experience weaker announcement reactions but subsequently exhibit stronger post-earnings drift, consistent with delayed price adjustment.</p>
-          <p>Together, these results suggest that salient expectations reshape how earnings information is incorporated into prices, generating asymmetric price reactions at the event while producing delayed price incorporation in the cross-section of non-round firms.</p>
+          <p>This paper investigates how cognitive accessibility of reference-points shapes investor behavior, focusing on the disposition effect: the tendency to sell winning investments while holding losing ones. I show that round numbers serve as fluent and memorable cognitive reference points that amplify the disposition effect. The gain-loss gap in selling is 6.20 percentage points for regular-price positions and 8.60 percentage points for round-price positions, an amplification of 2.40 percentage points (about 39 percent of the regular-price baseline); in account-level regressions the round-versus-regular amplification remains about 1.2 to 2.0 percentage points, or roughly one-third of the baseline disposition effect on regular-price holdings. A stock-split design that rescales purchase bases after the trade addresses purchase-time selection: the amplification persists when the adjusted basis remains round and vanishes when the split breaks roundness. Complementary evidence from earnings announcements shows that round consensus forecasts similarly organize market attention. The results highlight that reference dependence depends not only on what the reference point is, but on how easily it can be processed and remembered.</p>
         </div>
       </details>
-      <p class="avail">Draft available upon request.</p>
+      <p class="avail">Draft coming soon.</p>
     </article>
 
     <article class="paper reveal">
-      <h3>Memorability and the Disposition Effect</h3>
+      <h3>Reference-Dependent Sentiment and Price Dynamics</h3>
       <p class="meta"><strong>Litong Zhang</strong>. Sole authored.</p>
       <details class="abs">
         <summary>Abstract</summary>
         <div class="abstract-body">
-          <p>This paper investigates the effect of memory-induced attention on investor behavior, focusing on the disposition effect: the tendency to sell winning investments while holding onto losing ones. Drawing on associative memory theories (Bordalo, Gennaioli, and Shleifer, 2020), I show that round numbers in stock prices serve as memorable cognitive reference points that amplify the disposition effect. The finding is robust across specifications, highlighting the psychological impact of price roundness on trading behavior and the critical role of reference-point memorability in shaping investor decisions.</p>
+          <p>How does reference-dependent sentiment predict the path of stock prices? I examine whether investors&rsquo; discussion of gains and losses predicts returns at different horizons. Using an LLM-supervised classification of StockTwits posts, I measure the daily intensity of reference-dependent sentiment in the market. When investors talk more about gains, subsequent prices fall in the short run, consistent with gain realization creating selling pressure. The effect weakens at intermediate horizons, and prices reverse upward at longer horizons. This pattern is consistent with temporary selling pressure that is gradually absorbed as the market clears, with limits to arbitrage potentially delaying price adjustment. Overall, the evidence suggests that reference-dependent sentiment helps predict not only whether investors trade, but also the timing of price pressure and its reversal.</p>
         </div>
       </details>
-      <p class="avail">Draft available upon request.</p>
+      <p class="avail">Draft coming soon.</p>
     </article>
 
     <article class="paper reveal">
@@ -503,7 +480,7 @@
           <p>This paper investigates the causal role of contemporaneous social interaction in mutual fund managers&rsquo; portfolio choices. Using manually collected information on the Top 30 MBA networks of alumni reunion cohorts, I show that mutual fund managers connected to senior officers (CEO, CFO, and Chairman) at firms increase connected holdings following the MBA alumni reunions. Stock-level performance tests show that fund managers do not achieve significant positive returns on these connected positions after reunion events, favoring the familiarity hypothesis: an increase in contacts leads to a notable surge in buying behavior despite the absence of superior returns. These findings highlight the role of social networks as channels for the formation of behavioral bias.</p>
         </div>
       </details>
-      <p class="avail">Draft available upon request.</p>
+      <p class="avail">Draft coming soon.</p>
     </article>
   </div>
 </section>
@@ -517,7 +494,7 @@
     <p class="institution reveal">University of Southern California</p>
     <div class="course reveal">
       <p class="title">ECON 351: Microeconomics for Business</p>
-      <p class="detail">Sole Instructor, Undergraduate Core | Fall 2024 &mdash; Evaluation 3.68/4.00 (60 students)</p>
+      <p class="detail">Sole Instructor, Undergraduate Core | Fall 2024</p>
     </div>
     <div class="course reveal">
       <p class="title">GSBA 602: Selected Issues in Economic Theory I</p>
@@ -527,40 +504,6 @@
       <p class="title">GSBA 612: Selected Issues in Economic Theory II</p>
       <p class="detail">Teaching Assistant for Prof. Odilon C&acirc;mara, Ph.D. Core | Spring 2024</p>
     </div>
-  </div>
-</section>
-
-<!-- ======================= SERVICE & EXPERIENCE ======================= -->
-<section id="service">
-  <div class="wrap measure">
-    <p class="eyebrow reveal"><span class="num">04</span> &nbsp;/&nbsp; Service &amp; Experience</p>
-    <h2 class="section-title reveal">Service &amp; Experience</h2>
-
-    <p class="institution reveal">Presentations</p>
-    <ul class="plain-list reveal">
-      <li>USC Marshall Finance Seminar &mdash; <span class="detail">2024, 2025</span></li>
-      <li>USC Finance Ph.D. Miniconference &mdash; <span class="detail">2023</span></li>
-    </ul>
-
-    <p class="institution reveal">Service</p>
-    <ul class="plain-list reveal">
-      <li>Organizer, USC Finance Ph.D. Conference &mdash; <span class="detail">2024, 2025</span></li>
-    </ul>
-
-    <p class="institution reveal">Research Assistantships</p>
-    <ul class="plain-list reveal">
-      <li>Prof. David Hirshleifer, USC Marshall &mdash; <span class="detail">2022 &ndash; Present</span></li>
-      <li>Prof. Alon Brav and Prof. Sharon Belenzon, Duke Fuqua &mdash; <span class="detail">2019 &ndash; 2021</span></li>
-      <li>Prof. Matthew Ringgenberg, University of Utah &mdash; <span class="detail">2019 &ndash; 2021</span></li>
-      <li>Prof. Elena Simintzi, UNC Kenan-Flagler &mdash; <span class="detail">2019 &ndash; 2021</span></li>
-    </ul>
-
-    <p class="institution reveal">Skills</p>
-    <ul class="plain-list reveal">
-      <li>Programming &mdash; <span class="detail">Python, R, Stata, SAS, SQL</span></li>
-      <li>Machine learning &mdash; <span class="detail">PyTorch, HuggingFace Transformers, DeBERTa, OpenAI API, scikit-learn, LLM fine-tuning</span></li>
-      <li>Data &mdash; <span class="detail">CRSP, Compustat, WRDS, I/B/E/S, StockTwits</span></li>
-    </ul>
   </div>
 </section>
 

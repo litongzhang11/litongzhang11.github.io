@@ -1,4 +1,4 @@
-# litongzhang.github.io
+# litongzhang11.github.io
 
 Academic personal website for Litong Zhang (USC Marshall, Finance and Business Economics).
 
@@ -23,4 +23,4 @@ Then open http://localhost:8000.
 
 ## Deployment
 
-Pushing to the `main` branch of the `litongzhang.github.io` repository publishes to https://litongzhang.github.io (GitHub Pages, source = `main` branch, root folder).
+Pushing to the `main` branch of the `litongzhang11.github.io` repository publishes to https://litongzhang11.github.io (GitHub Pages, source = `main` branch, root folder).

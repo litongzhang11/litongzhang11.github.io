@@ -34,13 +34,37 @@
 }
 </script>
 
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/400.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/400-italic.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/600.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.2.1/700.css" />
 <script>document.documentElement.classList.add('js');</script>
 <style>
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("assets/fonts/texgyrepagella-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("assets/fonts/texgyrepagella-italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("assets/fonts/texgyrepagella-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("assets/fonts/texgyrepagella-bolditalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+
   :root {
     --paper:      #fbfaf6;
     --paper-warm: #f4f1e8;
@@ -64,7 +88,7 @@
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: "Libertinus Serif", "Linux Libertine", "Linux Libertine O", Georgia, serif;
+    font-family: Palatino, "Palatino Linotype", "TeX Gyre Pagella", "Book Antiqua", Georgia, serif;
     font-size: 18px;
     line-height: 1.55;
     font-weight: 400;

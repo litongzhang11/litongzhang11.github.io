@@ -1,0 +1,6 @@
+TeX Gyre Pagella
+Copyright 2006-2018 for TeX Gyre extensions by B. Jackowski, J.M. Nowacki, et al.
+(on behalf of TeX Users Groups). Vietnamese characters were added by Han The Thanh.
+
+Licensed under the GUST Font License.
+http://www.gust.org.pl/fonts/licenses/GUST-FONT-LICENSE.txt
